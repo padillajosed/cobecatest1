@@ -1,5 +1,13 @@
 <H1>Personajes de Harry Potter</H1>
-<mat-nav-list>Seleccione la casa</mat-nav-list>
+<h4>Basic mat-select</h4>
+<mat-form-field appearance="fill">
+  <mat-label>Casas de Hogwarts</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let casa of casas" [value]="casa.value">
+      {{casa.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
 
 <div class="wrapper">
   <div class="gallery">
